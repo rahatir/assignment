@@ -44,7 +44,7 @@
         <tr>
             <td colspan="5" class="text-right">
                 <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>
-                <button class="btn btn-success">Checkout</button>
+                <button class="btn btn-success" id="checkout-btn">Checkout</button>
             </td>
         </tr>
     </tfoot>
@@ -92,6 +92,11 @@
             });
         }
     });
+	
+	$("#checkout-btn").click(function (e) {
+		e.preventDefault();
+		alert('Coupon code can be added here.')
+	});
   
 </script>
 @endsection
