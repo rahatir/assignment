@@ -19,7 +19,7 @@ class CreateCouponsTable extends Migration
             $table->string('code', 10)->default('')->unique();
             $table->decimal('discount');
             $table->boolean('used')->default(false);
-            $table->timestamp();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 
